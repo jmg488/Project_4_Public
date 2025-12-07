@@ -1,5 +1,4 @@
 #!/bin/bash
-# ACTUALLY WORKING test script - sends moves to clients so they don't timeout
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -32,7 +31,7 @@ full_cleanup() {
     sleep 2
 }
 
-print_header "NIM SERVER - ACTUALLY WORKING TEST SUITE"
+print_header "NIM SERVER - TEST SUITE"
 echo "All tests now send moves so clients don't timeout"
 echo ""
 
@@ -309,36 +308,20 @@ echo ""
 
 if [ $TESTS_PASSED -ge 10 ]; then
     echo -e "${GREEN}========================================${NC}"
-    echo -e "${GREEN}EXCELLENT! All features working! ✓${NC}"
+    echo -e "${GREEN}EXCELLENT! All features working! ${NC}"
     echo -e "${GREEN}========================================${NC}"
     echo ""
-    echo "Your server successfully implements:"
-    echo "  ✓ Basic game protocol (70 points)"
-    echo "  ✓ Concurrent games (100 points)"
-    echo "  ✓ Extra credit features (+20 points)"
+    echo "Your server successfully implements everything."
     echo ""
-    echo -e "${GREEN}READY TO SUBMIT!${NC}"
-    echo ""
-    echo "Final steps:"
-    echo "  1. Update AUTHOR file with your NetID"
-    echo "  2. Add your name to README.md"
-    echo "  3. Submit the P4 directory"
     exit 0
 elif [ $TESTS_PASSED -ge 7 ]; then
     echo -e "${GREEN}========================================${NC}"
-    echo -e "${GREEN}GREAT! Most features working! ✓${NC}"
+    echo -e "${GREEN}GREAT! Most features working! ${NC}"
     echo -e "${GREEN}========================================${NC}"
-    echo ""
-    echo "Your server implements:"
-    echo "  ✓ Core game functionality"
-    echo "  ✓ Concurrent games"
-    echo "  ✓ Advanced features"
-    echo ""
-    echo -e "${GREEN}Good to submit!${NC}"
     exit 0
 else
     echo -e "${YELLOW}Some features working${NC}"
     echo ""
-    echo "Review logs if needed, but server appears functional"
+    echo "Review logs if needed."
     exit 0
 fi
